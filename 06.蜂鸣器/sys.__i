@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I.\Basic\delay -I.\Basic\sys -I.\CMSIS -I.\Hardware\LED -I.\Lib\inc -I.\Lib\src -I.\Startup -I.\User -I.\Hardware\KEY -I.\Basic\flash -I.\Hardware\BUZZER -I "D:\kell\ARM\INC" -I "D:\kell\ARM\INC\ST\STM32F10x" -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -o "sys.o" --omf_browse "sys.crf" --depend "sys.d" "Basic\sys\sys.c"
