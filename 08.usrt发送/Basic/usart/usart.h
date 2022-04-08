@@ -16,15 +16,6 @@
 #define EN_USART2 0
 #define EN_USART3 0
 
-
-extern u8 USART1_RX_BUF[USART1_REC_LEN];   //接收缓冲
-extern u8 USART2_RX_BUF[USART2_REC_LEN];
-extern u8 USART3_RX_BUF[USART3_REC_LEN];
-
-extern u16 USART1_RX_STA;	  //接收状态标记
-extern u16 USART2_RX_STA;
-extern u16 USART3_RX_STA;
-
 void USART1_Init(u32 bound);
 void USART2_Init(u32 bound);
 void USART3_Init(u32 bound);
