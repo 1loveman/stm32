@@ -1,0 +1,327 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\ÏîÄ¿\stm32\10.usart¿ØÖÆ\led.uvproj
+Project File Date:  04/07/2022
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+compiling usart.c...
+linking...
+Program Size: Code=12254 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12258 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+User\main.c(39): warning:  #223-D: function "KEY_LED1_ON" declared implicitly
+User\main.c:                    l1=KEY_LED1_ON();
+User\main.c:                       ^
+User\main.c(46): warning:  #223-D: function "KEY_LED1_OFF" declared implicitly
+User\main.c:                    l2=KEY_LED1_OFF();
+User\main.c:                       ^
+User\main.c: User\main.c: 2 warnings, 0 errors
+compiling key.c...
+Hardware\KEY\key.h(10): warning:  #1295-D: Deprecated declaration KEY_LED1_ON - give arg types
+Hardware\KEY\key.h:   u8 KEY_LED1_ON();
+Hardware\KEY\key.h:      ^
+Hardware\KEY\key.h(11): warning:  #1295-D: Deprecated declaration KEY_LED1_OFF - give arg types
+Hardware\KEY\key.h:   u8 KEY_LED1_OFF();
+Hardware\KEY\key.h:      ^
+Hardware\KEY\key.c(12): warning:  #223-D: function "dalay_ms" declared implicitly
+Hardware\KEY\key.c:             dalay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c(14): error:  #20: identifier "LEDPORT" is undefined
+Hardware\KEY\key.c:                     GPIO_WriteBit(LEDPORT,LED1,(BitAction)(0));
+Hardware\KEY\key.c:                                   ^
+Hardware\KEY\key.c(14): error:  #20: identifier "LED1" is undefined
+Hardware\KEY\key.c:                     GPIO_WriteBit(LEDPORT,LED1,(BitAction)(0));
+Hardware\KEY\key.c:                                           ^
+Hardware\KEY\key.c(25): warning:  #223-D: function "dalay_ms" declared implicitly
+Hardware\KEY\key.c:             dalay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c(27): error:  #20: identifier "LEDPORT" is undefined
+Hardware\KEY\key.c:                     GPIO_WriteBit(LEDPORT,LED1,(BitAction)(1));
+Hardware\KEY\key.c:                                   ^
+Hardware\KEY\key.c(27): error:  #20: identifier "LED1" is undefined
+Hardware\KEY\key.c:                     GPIO_WriteBit(LEDPORT,LED1,(BitAction)(1));
+Hardware\KEY\key.c:                                           ^
+Hardware\KEY\key.c(34): warning:  #1-D: last line of file ends without a newline
+Hardware\KEY\key.c:   }
+Hardware\KEY\key.c:    ^
+Hardware\KEY\key.c: Hardware\KEY\key.c: 5 warnings, 4 errors
+Target not created
+Build target 'Target 1'
+compiling key.c...
+Hardware\KEY\key.h(10): warning:  #1295-D: Deprecated declaration KEY_LED1_ON - give arg types
+Hardware\KEY\key.h:   u8 KEY_LED1_ON();
+Hardware\KEY\key.h:      ^
+Hardware\KEY\key.h(11): warning:  #1295-D: Deprecated declaration KEY_LED1_OFF - give arg types
+Hardware\KEY\key.h:   u8 KEY_LED1_OFF();
+Hardware\KEY\key.h:      ^
+Hardware\KEY\key.c(12): warning:  #223-D: function "dalay_ms" declared implicitly
+Hardware\KEY\key.c:             dalay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c(14): error:  #20: identifier "LEDPORT" is undefined
+Hardware\KEY\key.c:                     GPIO_WriteBit(LEDPORT,LED1,(BitAction)(0));
+Hardware\KEY\key.c:                                   ^
+Hardware\KEY\key.c(14): error:  #20: identifier "LED1" is undefined
+Hardware\KEY\key.c:                     GPIO_WriteBit(LEDPORT,LED1,(BitAction)(0));
+Hardware\KEY\key.c:                                           ^
+Hardware\KEY\key.c(25): warning:  #223-D: function "dalay_ms" declared implicitly
+Hardware\KEY\key.c:             dalay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c(27): error:  #20: identifier "LEDPORT" is undefined
+Hardware\KEY\key.c:                     GPIO_WriteBit(LEDPORT,LED1,(BitAction)(1));
+Hardware\KEY\key.c:                                   ^
+Hardware\KEY\key.c(27): error:  #20: identifier "LED1" is undefined
+Hardware\KEY\key.c:                     GPIO_WriteBit(LEDPORT,LED1,(BitAction)(1));
+Hardware\KEY\key.c:                                           ^
+Hardware\KEY\key.c: Hardware\KEY\key.c: 4 warnings, 4 errors
+Target not created
+Build target 'Target 1'
+compiling key.c...
+Hardware\KEY\key.h(11): warning:  #1295-D: Deprecated declaration KEY_LED1_ON - give arg types
+Hardware\KEY\key.h:   u8 KEY_LED1_ON();
+Hardware\KEY\key.h:      ^
+Hardware\KEY\key.h(12): warning:  #1295-D: Deprecated declaration KEY_LED1_OFF - give arg types
+Hardware\KEY\key.h:   u8 KEY_LED1_OFF();
+Hardware\KEY\key.h:      ^
+Hardware\KEY\key.c(12): warning:  #223-D: function "dalay_ms" declared implicitly
+Hardware\KEY\key.c:             dalay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c(25): warning:  #223-D: function "dalay_ms" declared implicitly
+Hardware\KEY\key.c:             dalay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c: Hardware\KEY\key.c: 4 warnings, 0 errors
+linking...
+led.axf: Error: L6218E: Undefined symbol dalay_ms (referred from key.o).
+led.axf: Not enough information to list image symbols.
+led.axf: Finished: 1 information, 0 warning and 1 error messages.
+Target not created
+Build target 'Target 1'
+compiling key.c...
+Hardware\KEY\key.h(5): error:  #11-D: unrecognized preprocessing directive
+Hardware\KEY\key.h:   #incldue"delay.h"
+Hardware\KEY\key.h:    ^
+Hardware\KEY\key.h(12): warning:  #1295-D: Deprecated declaration KEY_LED1_ON - give arg types
+Hardware\KEY\key.h:   u8 KEY_LED1_ON();
+Hardware\KEY\key.h:      ^
+Hardware\KEY\key.h(13): warning:  #1295-D: Deprecated declaration KEY_LED1_OFF - give arg types
+Hardware\KEY\key.h:   u8 KEY_LED1_OFF();
+Hardware\KEY\key.h:      ^
+Hardware\KEY\key.c(12): warning:  #223-D: function "dalay_ms" declared implicitly
+Hardware\KEY\key.c:             dalay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c(25): warning:  #223-D: function "dalay_ms" declared implicitly
+Hardware\KEY\key.c:             dalay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c: Hardware\KEY\key.c: 4 warnings, 1 error
+Target not created
+Build target 'Target 1'
+compiling key.c...
+Hardware\KEY\key.h(5): error:  #11-D: unrecognized preprocessing directive
+Hardware\KEY\key.h:   #incldue"delay.h"
+Hardware\KEY\key.h:    ^
+Hardware\KEY\key.h(12): warning:  #1295-D: Deprecated declaration KEY_LED1_ON - give arg types
+Hardware\KEY\key.h:   u8 KEY_LED1_ON();
+Hardware\KEY\key.h:      ^
+Hardware\KEY\key.h(13): warning:  #1295-D: Deprecated declaration KEY_LED1_OFF - give arg types
+Hardware\KEY\key.h:   u8 KEY_LED1_OFF();
+Hardware\KEY\key.h:      ^
+Hardware\KEY\key.c(12): warning:  #223-D: function "delay_ms" declared implicitly
+Hardware\KEY\key.c:             delay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c(25): warning:  #223-D: function "delay_ms" declared implicitly
+Hardware\KEY\key.c:             delay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c: Hardware\KEY\key.c: 4 warnings, 1 error
+Target not created
+Build target 'Target 1'
+compiling key.c...
+Hardware\KEY\key.h(5): error:  #11-D: unrecognized preprocessing directive
+Hardware\KEY\key.h:   #incldue"delay.h"
+Hardware\KEY\key.h:    ^
+Hardware\KEY\key.c(12): warning:  #223-D: function "delay_ms" declared implicitly
+Hardware\KEY\key.c:             delay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c(25): warning:  #223-D: function "delay_ms" declared implicitly
+Hardware\KEY\key.c:             delay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c: Hardware\KEY\key.c: 2 warnings, 1 error
+Target not created
+Build target 'Target 1'
+compiling key.c...
+Hardware\KEY\key.h(5): error:  #11-D: unrecognized preprocessing directive
+Hardware\KEY\key.h:   #incldue"delay.h"
+Hardware\KEY\key.h:    ^
+Hardware\KEY\key.c(12): warning:  #223-D: function "delay_ms" declared implicitly
+Hardware\KEY\key.c:             delay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c(25): warning:  #223-D: function "delay_ms" declared implicitly
+Hardware\KEY\key.c:             delay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c: Hardware\KEY\key.c: 2 warnings, 1 error
+Target not created
+Build target 'Target 1'
+compiling key.c...
+Hardware\KEY\key.h(5): error:  #11-D: unrecognized preprocessing directive
+Hardware\KEY\key.h:   #incldue"delay.h"
+Hardware\KEY\key.h:    ^
+Hardware\KEY\key.c(12): warning:  #223-D: function "delay_ms" declared implicitly
+Hardware\KEY\key.c:             delay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c(25): warning:  #223-D: function "delay_ms" declared implicitly
+Hardware\KEY\key.c:             delay_ms(20);
+Hardware\KEY\key.c:             ^
+Hardware\KEY\key.c: Hardware\KEY\key.c: 2 warnings, 1 error
+Target not created
+Build target 'Target 1'
+compiling key.c...
+linking...
+Program Size: Code=12474 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+User\main.c(39): warning:  #223-D: function "KEY_LED1_ON" declared implicitly
+User\main.c:                    l1=KEY_LED1_ON();
+User\main.c:                       ^
+User\main.c(46): warning:  #223-D: function "KEY_LED1_OFF" declared implicitly
+User\main.c:                    l2=KEY_LED1_OFF();
+User\main.c:                       ^
+User\main.c: User\main.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=12474 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12474 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12474 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+User\main.c(39): warning:  #223-D: function "KEY_LED1_ON" declared implicitly
+User\main.c:                    l1=KEY_LED1_ON();
+User\main.c:                       ^
+User\main.c(46): warning:  #223-D: function "KEY_LED1_OFF" declared implicitly
+User\main.c:                    l2=KEY_LED1_OFF();
+User\main.c:                       ^
+User\main.c: User\main.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=12474 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12474 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12474 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12474 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12474 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12474 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling key.c...
+linking...
+Program Size: Code=12474 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12474 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12474 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12482 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12482 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12478 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12478 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12482 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling key.c...
+linking...
+Program Size: Code=12478 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling usart.c...
+compiling key.c...
+linking...
+Program Size: Code=12478 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12494 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12498 RO-data=938 RW-data=44 ZI-data=1636  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
