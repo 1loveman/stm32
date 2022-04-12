@@ -9,78 +9,195 @@ Project File Date:  04/07/2022
 <h2>Output:</h2>
 Build target 'Target 1'
 compiling main.c...
-.\Basic\usart\usart.h(19): error:  #20: identifier "USART_REC_LEN" is undefined
-.\Basic\usart\usart.h:   extern u8 USART1_RX_BUF[USART_REC_LEN];
-.\Basic\usart\usart.h:                           ^
-.\Basic\usart\usart.h: User\main.c: 0 warnings, 1 error
+User\main.c(15): error:  #20: identifier "USART_RX_STA" is undefined
+User\main.c:            if(USART_RX_STA&0xC000){
+User\main.c:               ^
+User\main.c(9): warning:  #177-D: variable "ret" was declared but never referenced
+User\main.c:    char ret=0;
+User\main.c:         ^
+User\main.c: User\main.c: 1 warning, 1 error
 compiling usart.c...
-Basic\usart\usart.h(19): error:  #20: identifier "USART_REC_LEN" is undefined
-Basic\usart\usart.h:   extern u8 USART1_RX_BUF[USART_REC_LEN];
-Basic\usart\usart.h:                           ^
-Basic\usart\usart.c(74): warning:  #223-D: function "GetITStatus" declared implicitly
-Basic\usart\usart.c:    if(GetITStatus(USART1,USART_IT_RXNE)){
-Basic\usart\usart.c:       ^
-Basic\usart\usart.c(75): warning:  #223-D: function "USART_ReceiveDate" declared implicitly
-Basic\usart\usart.c:            res=USART_ReceiveDate(USART1);
-Basic\usart\usart.c:                ^
-Basic\usart\usart.c(76): error:  #20: identifier "ret" is undefined
-Basic\usart\usart.c:            printf("%c ",ret);
-Basic\usart\usart.c:                         ^
-Basic\usart\usart.c(78): error:  #20: identifier "USART1_REC_SX" is undefined
-Basic\usart\usart.c:                    if(USART1_REC_SX&0x4000){
-Basic\usart\usart.c:                       ^
-Basic\usart\usart.c: Basic\usart\usart.c: 2 warnings, 3 errors
 Target not created
 Build target 'Target 1'
 compiling main.c...
+User\main.c(9): warning:  #177-D: variable "ret" was declared but never referenced
+User\main.c:    char ret=0;
+User\main.c:         ^
+User\main.c: User\main.c: 1 warning, 0 errors
+linking...
+Program Size: Code=12290 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12290 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12290 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12290 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+User\main.c(9): warning:  #177-D: variable "ret" was declared but never referenced
+User\main.c:    char ret=0;
+User\main.c:         ^
+User\main.c: User\main.c: 1 warning, 0 errors
+linking...
+Program Size: Code=12294 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12294 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12294 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12294 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12294 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12294 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+compiling d:\kell\arm\sfd\st\stm32f10x\stm32f10x_lib.sfd...
+Build target 'Target 1'
+compiling main.c...
+User\main.c(9): warning:  #177-D: variable "ret" was declared but never referenced
+User\main.c:    char ret=0;
+User\main.c:         ^
+User\main.c: User\main.c: 1 warning, 0 errors
+linking...
+Program Size: Code=12290 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12290 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12290 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+User\main.c(9): warning:  #177-D: variable "ret" was declared but never referenced
+User\main.c:    char ret=0;
+User\main.c:         ^
+User\main.c: User\main.c: 1 warning, 0 errors
+linking...
+Program Size: Code=12290 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12286 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12286 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12286 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12290 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
 compiling usart.c...
-Basic\usart\usart.c(74): warning:  #223-D: function "GetITStatus" declared implicitly
-Basic\usart\usart.c:    if(GetITStatus(USART1,USART_IT_RXNE)){
-Basic\usart\usart.c:       ^
-Basic\usart\usart.c(75): warning:  #223-D: function "USART_ReceiveDate" declared implicitly
-Basic\usart\usart.c:            res=USART_ReceiveDate(USART1);
-Basic\usart\usart.c:                ^
-Basic\usart\usart.c(76): error:  #20: identifier "ret" is undefined
-Basic\usart\usart.c:            printf("%c ",ret);
-Basic\usart\usart.c:                         ^
-Basic\usart\usart.c(78): error:  #20: identifier "USART1_REC_SX" is undefined
-Basic\usart\usart.c:                    if(USART1_REC_SX&0x4000){
-Basic\usart\usart.c:                       ^
-Basic\usart\usart.c: Basic\usart\usart.c: 2 warnings, 2 errors
+linking...
+Program Size: Code=12294 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12294 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12294 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling usart.c...
+Basic\usart\usart.c(80): error:  #29: expected an expression
+Basic\usart\usart.c:                                    USART1_RX_STA=|0x8000;
+Basic\usart\usart.c:                                                  ^
+Basic\usart\usart.c: Basic\usart\usart.c: 0 warnings, 1 error
 Target not created
 Build target 'Target 1'
 compiling usart.c...
-Basic\usart\usart.c(75): warning:  #223-D: function "USART_ReceiveDate" declared implicitly
-Basic\usart\usart.c:            res=USART_ReceiveDate(USART1);
-Basic\usart\usart.c:                ^
-Basic\usart\usart.c(76): error:  #20: identifier "ret" is undefined
-Basic\usart\usart.c:            printf("%c ",ret);
-Basic\usart\usart.c:                         ^
-Basic\usart\usart.c(78): error:  #20: identifier "USART1_REC_SX" is undefined
-Basic\usart\usart.c:                    if(USART1_REC_SX&0x4000){
-Basic\usart\usart.c:                       ^
-Basic\usart\usart.c: Basic\usart\usart.c: 1 warning, 2 errors
-Target not created
-Build target 'Target 1'
-compiling usart.c...
-Basic\usart\usart.c(76): error:  #20: identifier "ret" is undefined
-Basic\usart\usart.c:            printf("%c ",ret);
-Basic\usart\usart.c:                         ^
-Basic\usart\usart.c(78): error:  #20: identifier "USART1_REC_SX" is undefined
-Basic\usart\usart.c:                    if(USART1_REC_SX&0x4000){
-Basic\usart\usart.c:                       ^
-Basic\usart\usart.c: Basic\usart\usart.c: 0 warnings, 2 errors
-Target not created
-Build target 'Target 1'
-compiling usart.c...
-Basic\usart\usart.c(78): error:  #20: identifier "USART1_REC_STA" is undefined
-Basic\usart\usart.c:                    if(USART1_REC_STA&0x4000){
-Basic\usart\usart.c:                       ^
+Basic\usart\usart.c(80): error:  #29: expected an expression
+Basic\usart\usart.c:                                    USART1_RX_STA=|0x8000;
+Basic\usart\usart.c:                                                  ^
 Basic\usart\usart.c: Basic\usart\usart.c: 0 warnings, 1 error
 Target not created
 Build target 'Target 1'
 compiling usart.c...
 linking...
-Program Size: Code=12610 RO-data=938 RW-data=48 ZI-data=1832  
+Program Size: Code=12298 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12298 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12310 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12310 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling usart.c...
+linking...
+Program Size: Code=12314 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12314 RO-data=782 RW-data=48 ZI-data=1832  
+FromELF: creating hex file...
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12314 RO-data=782 RW-data=48 ZI-data=1832  
 FromELF: creating hex file...
 "led.axf" - 0 Error(s), 0 Warning(s).

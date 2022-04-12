@@ -77,7 +77,7 @@ void USART1_IRQHandler(void){
 		if(!(USART1_RX_STA&0x8000)){
 			if(USART1_RX_STA&0x4000){
 				if(res==0x0a){
-					USART1_RX_STA=0x8000;
+					USART1_RX_STA|=0x8000;	//为了不改变其他位所以用|=
 				}
 				else{
 					USART1_RX_STA=0;
@@ -85,11 +85,11 @@ void USART1_IRQHandler(void){
 			}
 			else{
 				if(res==0x0d){
-					USART1_RX_STA=0x4000;
+					USART1_RX_STA|=0x4000; //细节为了不改变其他位所以用|=
 				}
 				else{
 					USART1_RX_BUF[(USART1_RX_STA++)&0x3FFF]=res;
-					if(USART1_RX_STA&0x3FFF>USART1_REC_LEN-1){
+					if((USART1_RX_STA&0x3FFF)>USART1_REC_LEN-1){
 						USART1_RX_STA=0;
 					}
 					
