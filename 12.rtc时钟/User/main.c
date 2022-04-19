@@ -5,7 +5,5 @@
 int main(){
 	RCC_Configuration();
 	LED_Init();
-	while(1){
-
-	}
+	
 }

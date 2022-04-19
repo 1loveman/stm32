@@ -2,7 +2,7 @@ stm32f10x_sdio.o: Lib\src\stm32f10x_sdio.c
 stm32f10x_sdio.o: .\Lib\inc\stm32f10x_sdio.h
 stm32f10x_sdio.o: .\CMSIS\stm32f10x.h
 stm32f10x_sdio.o: .\CMSIS\core_cm3.h
-stm32f10x_sdio.o: D:\kell\ARM\RV31\INC\stdint.h
+stm32f10x_sdio.o: D:\Keil\ARM\RV31\INC\stdint.h
 stm32f10x_sdio.o: .\CMSIS\system_stm32f10x.h
 stm32f10x_sdio.o: .\User\stm32f10x_conf.h
 stm32f10x_sdio.o: .\Lib\inc\stm32f10x_adc.h

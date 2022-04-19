@@ -2,7 +2,7 @@ stm32f10x_exti.o: Lib\src\stm32f10x_exti.c
 stm32f10x_exti.o: .\Lib\inc\stm32f10x_exti.h
 stm32f10x_exti.o: .\CMSIS\stm32f10x.h
 stm32f10x_exti.o: .\CMSIS\core_cm3.h
-stm32f10x_exti.o: D:\kell\ARM\RV31\INC\stdint.h
+stm32f10x_exti.o: D:\Keil\ARM\RV31\INC\stdint.h
 stm32f10x_exti.o: .\CMSIS\system_stm32f10x.h
 stm32f10x_exti.o: .\User\stm32f10x_conf.h
 stm32f10x_exti.o: .\Lib\inc\stm32f10x_adc.h

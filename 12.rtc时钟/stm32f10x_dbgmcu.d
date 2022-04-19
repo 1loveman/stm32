@@ -2,7 +2,7 @@ stm32f10x_dbgmcu.o: Lib\src\stm32f10x_dbgmcu.c
 stm32f10x_dbgmcu.o: .\Lib\inc\stm32f10x_dbgmcu.h
 stm32f10x_dbgmcu.o: .\CMSIS\stm32f10x.h
 stm32f10x_dbgmcu.o: .\CMSIS\core_cm3.h
-stm32f10x_dbgmcu.o: D:\kell\ARM\RV31\INC\stdint.h
+stm32f10x_dbgmcu.o: D:\Keil\ARM\RV31\INC\stdint.h
 stm32f10x_dbgmcu.o: .\CMSIS\system_stm32f10x.h
 stm32f10x_dbgmcu.o: .\User\stm32f10x_conf.h
 stm32f10x_dbgmcu.o: .\Lib\inc\stm32f10x_adc.h
