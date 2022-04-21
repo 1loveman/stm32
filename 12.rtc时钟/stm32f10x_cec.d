@@ -2,7 +2,7 @@ stm32f10x_cec.o: Lib\src\stm32f10x_cec.c
 stm32f10x_cec.o: .\Lib\inc\stm32f10x_cec.h
 stm32f10x_cec.o: .\CMSIS\stm32f10x.h
 stm32f10x_cec.o: .\CMSIS\core_cm3.h
-stm32f10x_cec.o: D:\Keil\ARM\RV31\INC\stdint.h
+stm32f10x_cec.o: D:\kell\ARM\RV31\INC\stdint.h
 stm32f10x_cec.o: .\CMSIS\system_stm32f10x.h
 stm32f10x_cec.o: .\User\stm32f10x_conf.h
 stm32f10x_cec.o: .\Lib\inc\stm32f10x_adc.h
