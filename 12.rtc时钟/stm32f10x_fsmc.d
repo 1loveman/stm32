@@ -2,7 +2,7 @@ stm32f10x_fsmc.o: Lib\src\stm32f10x_fsmc.c
 stm32f10x_fsmc.o: .\Lib\inc\stm32f10x_fsmc.h
 stm32f10x_fsmc.o: .\CMSIS\stm32f10x.h
 stm32f10x_fsmc.o: .\CMSIS\core_cm3.h
-stm32f10x_fsmc.o: D:\kell\ARM\RV31\INC\stdint.h
+stm32f10x_fsmc.o: D:\Keil\ARM\RV31\INC\stdint.h
 stm32f10x_fsmc.o: .\CMSIS\system_stm32f10x.h
 stm32f10x_fsmc.o: .\User\stm32f10x_conf.h
 stm32f10x_fsmc.o: .\Lib\inc\stm32f10x_adc.h

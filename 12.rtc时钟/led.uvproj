@@ -345,7 +345,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Basic\sys;.\CMSIS;.\Hardware\LED;.\Lib\inc;.\Lib\src;.\Startup;.\User</IncludePath>
+              <IncludePath>.\Basic\sys;.\CMSIS;.\Hardware\LED;.\Lib\inc;.\Lib\src;.\Startup;.\User;.\Basic\rtc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -480,6 +480,11 @@
               <FileType>1</FileType>
               <FilePath>.\Lib\src\stm32f10x_spi.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f10x_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Lib\src\stm32f10x_rtc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -524,6 +529,11 @@
               <FileName>sys.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Basic\sys\sys.c</FilePath>
+            </File>
+            <File>
+              <FileName>rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Basic\rtc\rtc.c</FilePath>
             </File>
           </Files>
         </Group>
