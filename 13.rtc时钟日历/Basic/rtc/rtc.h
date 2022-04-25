@@ -1,7 +1,6 @@
 #ifndef __RTC_H__
 #define __RTC_H__
-
-#include"sys.h"
+#include"sys.h";
 
 extern u16 ryear;
 extern u8 rmon,rday,rhour,rmin,rsec,rweek;
