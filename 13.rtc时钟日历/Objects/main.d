@@ -29,9 +29,9 @@
 .\objects\main.o: .\Lib\inc\stm32f10x_wwdg.h
 .\objects\main.o: .\Lib\inc\misc.h
 .\objects\main.o: .\Basic\sys.h
+.\objects\main.o: .\Basic\rtc.h
 .\objects\main.o: .\Basic\usart.h
 .\objects\main.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: D:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\main.o: D:\keil\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\main.o: D:\keil\ARM\ARMCC\Bin\..\include\string.h
-.\objects\main.o: .\Basic\rtc.h

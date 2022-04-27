@@ -89,7 +89,7 @@ u8 RTC_Set(u16 year,u8 mon,u8 day,u8 hour,u8 min,u8 sec){
     while(t_num<mon){
         counter+=mon_tab[t_num-1]*86400;
         if(Is_Leap_Year(year)&&(t_num==2))counter+=86400;
-				t_num++;
+		t_num++;
     }
     counter+=(day-1)*86400;
     counter+=hour*3600;

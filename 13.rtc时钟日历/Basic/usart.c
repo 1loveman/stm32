@@ -14,7 +14,6 @@ int fputc(int ch,FILE* fp){
     USARTn->DR=(u8)ch;
     return ch;
 }
-
 #endif 
 
 #if EN_USART1
@@ -62,8 +61,8 @@ void USART1_Init(u32 bound){
     USART_InitStructure.USART_HardwareFlowControl=USART_HardwareFlowControl_None;
     USART_InitStructure.USART_Mode=USART_Mode_Rx|USART_Mode_Tx;
     USART_Init(USART1,&USART_InitStructure);
-    USART_Cmd(USART1,ENABLE);
     USART_ITConfig(USART1,USART_IT_RXNE,ENABLE);
+    USART_Cmd(USART1,ENABLE);
 }
 
 void USART1_IRQHandler(void){
@@ -80,7 +79,7 @@ void USART1_IRQHandler(void){
                 if(rec==0X0D)USART1_RX_STA|=0X4000;
                 else{
                     USART1_RX_BUFF[(USART1_RX_STA++)&0X3FFF]=rec;
-                    if((USART1_RX_STA&0X3FFF)>USART1_REC_LEN-1){
+                    if((USART1_RX_STA&0X3FFF)>(USART1_REC_LEN-1)){
                         USART1_RX_STA=0;
                     }
                 }
