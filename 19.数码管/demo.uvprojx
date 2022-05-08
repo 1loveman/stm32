@@ -475,11 +475,6 @@
               <FilePath>.\Basic\sys.c</FilePath>
             </File>
             <File>
-              <FileName>usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Basic\usart.c</FilePath>
-            </File>
-            <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Basic\rtc.c</FilePath>

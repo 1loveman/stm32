@@ -14,7 +14,6 @@
 ".\objects\stm32f10x_it.o"
 ".\objects\delay.o"
 ".\objects\sys.o"
-".\objects\usart.o"
 ".\objects\rtc.o"
 ".\objects\tm1640.o"
 --strict --scatter ".\Objects\demo.sct"
