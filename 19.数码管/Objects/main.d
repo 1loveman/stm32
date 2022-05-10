@@ -31,3 +31,4 @@
 .\objects\main.o: .\Basic\sys.h
 .\objects\main.o: .\Basic\delay.h
 .\objects\main.o: .\Basic\rtc.h
+.\objects\main.o: .\Hardware\TM1640.h
