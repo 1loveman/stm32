@@ -1,0 +1,27 @@
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'D:\keil\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling OLED.c...
+Hardware\OLED.h(12): error:  #20: identifier "u8" is undefined
+  void OLED_Light(u8 x);  
+Hardware\OLED.h(14): error:  #20: identifier "u8" is undefined
+  void OLED_Show_8x16(u8 x,u8 y,u16 w);
+Hardware\OLED.h(14): error:  #20: identifier "u8" is undefined
+  void OLED_Show_8x16(u8 x,u8 y,u16 w);
+Hardware\OLED.h(14): error:  #20: identifier "u16" is undefined
+  void OLED_Show_8x16(u8 x,u8 y,u16 w);
+Hardware\OLED.h(15): error:  #20: identifier "u8" is undefined
+  void OLED_Show_8X16Buffer(u8 row,u8* ptr);
+Hardware\OLED.h(15): error:  #20: identifier "u8" is undefined
+  void OLED_Show_8X16Buffer(u8 row,u8* ptr);
+Hardware\OLED.c(8): error:  #20: identifier "u8" is undefined
+      u8 buf[]={
+Hardware\OLED.c(11): warning:  #1-D: last line of file ends without a newline
+  }
+Hardware\OLED.c(10): error:  #29: expected an expression
+      }
+Hardware\OLED.c(11): error:  #65: expected a ";"
+  }
+Hardware\OLED.c: 1 warning, 9 errors
+".\Objects\demo.axf" - 9 Error(s), 1 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:04
