@@ -39,9 +39,9 @@ void I2C1_Send_Buffer(u8 SlaveAddr,u8 WriteAddr,u8* BufferPtr,u16 BufferLen){
     I2C_GenerateSTART(I2C1,ENABLE);
     while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT));
     I2C_Send7bitAddress(I2C1,SlaveAddr,I2C_Direction_Transmitter);
-    while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
     I2C_SendData(I2C1,WriteAddr);
-    while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED));
     while(BufferLen--){
         I2C_SendData(I2C1,*(BufferPtr++));
         while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED));

@@ -330,7 +330,7 @@ I (.\Lib\inc\stm32f10x_tim.h)(0x4D783BB4)
 I (.\Lib\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (.\Lib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (.\Lib\inc\misc.h)(0x4D783BB4)
-F (.\Basic\i2c.c)(0x6282075E)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Basic -I .\CMSIS -I .\Hardware -I .\Lib\inc -I .\Lib\src -I .\Startup -I .\User-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\i2c.o --omf_browse .\objects\i2c.crf --depend .\objects\i2c.d)
+F (.\Basic\i2c.c)(0x62862D47)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Basic -I .\CMSIS -I .\Hardware -I .\Lib\inc -I .\Lib\src -I .\Startup -I .\User-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\i2c.o --omf_browse .\objects\i2c.crf --depend .\objects\i2c.d)
 I (Basic\i2c.h)(0x62820762)
 I (.\CMSIS\stm32f10x.h)(0x4D783CB4)
 I (.\CMSIS\core_cm3.h)(0x4D523B58)
