@@ -29,5 +29,6 @@
 .\objects\oled.o: .\Lib\inc\stm32f10x_usart.h
 .\objects\oled.o: .\Lib\inc\stm32f10x_wwdg.h
 .\objects\oled.o: .\Lib\inc\misc.h
+.\objects\oled.o: .\Basic\i2c.h
 .\objects\oled.o: Hardware\ASCLL.h
 .\objects\oled.o: Hardware\CH.h

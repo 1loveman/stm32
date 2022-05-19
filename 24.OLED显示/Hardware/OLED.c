@@ -1,4 +1,6 @@
 #include"OLED.h"
+#include"ASCLL.h"
+#include"CH.h"
 
 void OLED_Init(void){
     OLED_OFF();
@@ -43,5 +45,28 @@ void OLED_Light(u8 x){
 
 void OLED_Clear(void){
     u8 j,i;
-    for()
+    for(i=0XB0;i<0XB8;i++){
+        I2C1_Send_Byte(SlaveAddr,COM,i);
+        I2C1_Send_Byte(SlaveAddr,COM,0X10);
+        I2C1_Send_Byte(SlaveAddr,COM,0X00);
+        for(j=0;j<132;j++){
+            I2C1_Send_Byte(SlaveAddr,DAT,0X00);
+        }
+    }
+}
+
+void OLED_Show_8x16(u8 x,u8 y,u16 w){
+    u8 wi,i,t;
+    y+=2;
+    t=0;
+    for(wi=0;wi<2;wi++){
+        I2C1_Send_Byte(SlaveAddr,COM,0XB0+x);
+        I2C1_Send_Byte(SlaveAddr,COM,y/16+0x10);
+        I2C1_Send_Byte(SlaveAddr,COM,y%16);
+        for(i=0;i<8;i++){
+            I2C1_Send_Byte(SlaveAddr,DAT,AscllCode[(w*16)+t-512]);
+            t++;
+        }
+        x++;
+    }
 }
