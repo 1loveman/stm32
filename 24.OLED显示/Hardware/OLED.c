@@ -1,6 +1,5 @@
 #include"OLED.h"
 #include"ASCLL.h"
-#include"CH.h"
 
 void OLED_Init(void){
     OLED_OFF();
@@ -68,5 +67,11 @@ void OLED_Show_8x16(u8 x,u8 y,u16 w){
             t++;
         }
         x++;
+    }
+}
+void OLED_Show_8X16Buffer(u8 row,u8 col,u8* ptr){
+    while(*ptr!='\0'){
+        OLED_Show_8x16(row,col*8,*(ptr++));
+        col++;
     }
 }

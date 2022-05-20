@@ -10,7 +10,7 @@ int main(void){
     I2C1_Configuration();
     OLED_Init();
     while(1){
-        OLED_Show_8x16(6,13*8,'C');
+        OLED_Show_8x16(0,0,'#');
         Delay_ms(200);
     }
 }

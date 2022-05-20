@@ -31,4 +31,3 @@
 .\objects\oled.o: .\Lib\inc\misc.h
 .\objects\oled.o: .\Basic\i2c.h
 .\objects\oled.o: Hardware\ASCLL.h
-.\objects\oled.o: Hardware\CH.h

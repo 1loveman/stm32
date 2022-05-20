@@ -12,6 +12,6 @@ void OLED_OFF(void);
 void OLED_Light(u8 x);  
 void OLED_Clear(void);
 void OLED_Show_8x16(u8 x,u8 y,u16 w);
-// void OLED_Show_8X16Buffer(u8 row,u8* ptr);
+void OLED_Show_8X16Buffer(u8 row,u8 col,u8* ptr);
 
 #endif
