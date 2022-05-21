@@ -1,5 +1,7 @@
 #include"OLED.h"
 #include"ASCLL.h"
+#include"CH.h"
+#include"PHOTO.h"
 
 void OLED_Init(void){
     OLED_OFF();
@@ -9,15 +11,15 @@ void OLED_Init(void){
 
 void OLED_ON(void){
     u8 buf[]={
-        0XAE,
-        0X00,0X10,
-        0XD5,0X80,//
+        0xAE,
+        0X10,0X00,
+        0XD5,0X80,
         0XA8,0X3F,
         0XD3,0X00,
         0XB0,
         0X40,
         0X8D,0X14,
-        0XA1,//
+        0XA1,
         0XC8,
         0XDA,0X12,
         0X81,0XFF,
@@ -37,14 +39,10 @@ void OLED_OFF(void){
     };
     I2C1_Send_Buffer(SlaveAddr,COM,buf,3);
 }
-void OLED_Light(u8 x){
-    I2C1_Send_Byte(SlaveAddr,COM,0X81);
-    I2C1_Send_Byte(SlaveAddr,COM,x);
-}
 
 void OLED_Clear(void){
-    u8 j,i;
-    for(i=0XB0;i<0XB8;i++){
+    u8 i,j;
+    for(i=0xB0;i<0XB8;i++){
         I2C1_Send_Byte(SlaveAddr,COM,i);
         I2C1_Send_Byte(SlaveAddr,COM,0X10);
         I2C1_Send_Byte(SlaveAddr,COM,0X00);
@@ -54,24 +52,52 @@ void OLED_Clear(void){
     }
 }
 
-void OLED_Show_8x16(u8 x,u8 y,u16 w){
-    u8 wi,i,t;
-    y+=2;
+void OLED_Show8x16(u8 ROL,u8 COL,u16 Data){
+    u8 wi,j;
+    COL+=2;
+    u8 t=0;
+    for(wi=0;wi<2;wi++){
+        I2C1_Send_Byte(SlaveAddr,COM,0XB0+ROL);
+        I2C1_Send_Byte(SlaveAddr,COM,COL/16+0X10);
+        I2C1_Send_Byte(SlaveAddr,COM,COL%16+0X00);
+        for(j=0;j<8;j++){
+           I2C1_Send_Byte(SlaveAddr,DAT,ASCLLCODE[(Data*16)+(t++)-512]);
+        }
+        ROL++;
+    }
+}
+
+void OLED_Show8x16Buffer(u8 ROL,u8 COL,u8* ptr){
+    while((*ptr)!='\0'){
+        OLED_Show8x16(ROL,COL,*(ptr++));
+        COL+=8;
+    }       
+}
+
+void OLED_Show16x16CH(u8 ROL,u8 COL,u16 Data){
+    u8 wi,j,t;
+    COL+=2;
     t=0;
     for(wi=0;wi<2;wi++){
-        I2C1_Send_Byte(SlaveAddr,COM,0XB0+x);
-        I2C1_Send_Byte(SlaveAddr,COM,y/16+0x10);
-        I2C1_Send_Byte(SlaveAddr,COM,y%16);
-        for(i=0;i<8;i++){
-            I2C1_Send_Byte(SlaveAddr,DAT,AscllCode[(w*16)+t-512]);
-            t++;
+        I2C1_Send_Byte(SlaveAddr,COM,0XB0+ROL);
+        I2C1_Send_Byte(SlaveAddr,COM,COL/16+0X10);
+        I2C1_Send_Byte(SlaveAddr,COM,COL%16+0X00);
+        for(j=0;j<16;j++){
+            I2C1_Send_Byte(SlaveAddr,DAT,CHCODE[Data*32+(t++)]);
         }
-        x++;
+        ROL++;
     }
 }
-void OLED_Show_8X16Buffer(u8 row,u8 col,u8* ptr){
-    while(*ptr!='\0'){
-        OLED_Show_8x16(row,col*8,*(ptr++));
-        col++;
+
+void OLED_ShowPhoto(void){
+    u8 wi,j;
+    for(wi=0;wi<8;wi++){
+        I2C1_Send_Byte(SlaveAddr,COM,0XB0+wi);
+        I2C1_Send_Byte(SlaveAddr,COM,0X10);
+        I2C1_Send_Byte(SlaveAddr,COM,0X02);
+        for(j=0;j<128;j++){
+            I2C1_Send_Byte(SlaveAddr,DAT,PHOTOCODE[j+wi*128]);
+        }
     }
 }
+

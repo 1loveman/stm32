@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\demo.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\demo.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Thu May 19 21:38:03 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Sat May 21 22:44:53 2022
 <BR><P>
 <H3>Maximum Stack Usage =         84 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -85,8 +85,8 @@ Function Pointers
 Global Symbols
 </H3>
 <P><STRONG><a name="[3a]"></a>__main</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, __main.o(!!!main))
-<BR><BR>[Calls]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
-<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+<BR><BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
 <P><STRONG><a name="[3b]"></a>__scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter))
@@ -490,7 +490,7 @@ Global Symbols
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_CheckEvent
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Show_8x16
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowPhoto
 </UL>
 
 <P><STRONG><a name="[58]"></a>I2C_CheckEvent</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, stm32f10x_i2c.o(i.I2C_CheckEvent))
@@ -573,8 +573,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
 </UL>
 
-<P><STRONG><a name="[63]"></a>OLED_Show_8x16</STRONG> (Thumb, 146 bytes, Stack size 32 bytes, oled.o(i.OLED_Show_8x16))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = OLED_Show_8x16 &rArr; I2C1_Send_Byte &rArr; I2C_CheckEvent
+<P><STRONG><a name="[63]"></a>OLED_ShowPhoto</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, oled.o(i.OLED_ShowPhoto))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = OLED_ShowPhoto &rArr; I2C1_Send_Byte &rArr; I2C_CheckEvent
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C1_Send_Byte
 </UL>
@@ -680,11 +680,11 @@ Global Symbols
 <P><STRONG><a name="[8]"></a>UsageFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.UsageFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[44]"></a>main</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[44]"></a>main</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = main &rArr; I2C1_Configuration &rArr; I2C_Init &rArr; RCC_GetClocksFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Configuration
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Show_8x16
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowPhoto
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C1_Configuration
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms

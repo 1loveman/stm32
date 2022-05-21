@@ -30,5 +30,5 @@
 .\objects\main.o: .\Lib\inc\misc.h
 .\objects\main.o: .\Basic\sys.h
 .\objects\main.o: .\Basic\delay.h
-.\objects\main.o: .\Basic\i2c.h
 .\objects\main.o: .\Hardware\OLED.h
+.\objects\main.o: .\Basic\i2c.h
