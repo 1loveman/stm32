@@ -46,7 +46,7 @@ void OLED_Clear(void){
         I2C1_Send_Byte(SlaveAddr,COM,i);
         I2C1_Send_Byte(SlaveAddr,COM,0X10);
         I2C1_Send_Byte(SlaveAddr,COM,0X00);
-        for(j=0;j<132;j++){
+        for(j=0;j<128;j++){
             I2C1_Send_Byte(SlaveAddr,DAT,0X00);
         }
     }
