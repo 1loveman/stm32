@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "TOUCH.C": "cpp",
+        "stepermotor.h": "c"
+    }
+}
