@@ -1,0 +1,17 @@
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'D:\keil\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling CAN.c...
+Hardware\CAN.c(19): warning:  #940-D: missing return statement at end of non-void function "CAN_Configuration" 
+  }
+Hardware\CAN.c(5): warning:  #177-D: variable "CAN_InitStructure"  was declared but never referenced
+      CAN_InitTypeDef CAN_InitStructure;
+Hardware\CAN.c(6): warning:  #177-D: variable "CAN_FilterInitStructure"  was declared but never referenced
+      CAN_FilterInitTypeDef CAN_FilterInitStructure;
+Hardware\CAN.c: 3 warnings, 0 errors
+linking...
+.\Objects\demo.axf: Error: L6218E: Undefined symbol main (referred from __rtentry2.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+".\Objects\demo.axf" - 1 Error(s), 3 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:01
