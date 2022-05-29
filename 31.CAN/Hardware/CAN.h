@@ -1,7 +1,7 @@
 #ifndef __CAN_H__
 #define __CAN_H__
 #include"stm32f10x.h"
-#define CAN_INT_ENABLE 0
+#define CAN_INT_ENABLE 1
 #define TSJW CAN_SJW_1tq
 #define TBS1 CAN_BS1_8tq
 #define TBS2 CAN_BS2_7tq

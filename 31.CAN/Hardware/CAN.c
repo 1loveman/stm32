@@ -16,4 +16,12 @@ u8 CAN_Configuration(void){
     GPIO_InitStructure.GPIO_Mode=GPIO_Mode_IPU;
     GPIO_Init(GPIOA,&GPIO_InitStructure);
 
+    #if CAN_INT_ENABLE
+    CAN_ITConfig(CAN1,CAN_IT_FMP0,ENABLE);
+    NVIC_InitStructure.NVIC_IRQChannel=USB_LP_CAN1_RX0_IRQn;
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority=0;
+    NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;
+    #endif
+    
 }
