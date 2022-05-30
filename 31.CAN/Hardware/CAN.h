@@ -9,6 +9,7 @@
 
 u8 CAN_Configuration(void);
 u8 CAN_Send_Msg(u8* msg,u8 len);
-u8 CAN_Receive_Msg(u8* buf);
+u8 CAN_Receive_Msg(u8* buf,u8 len);
 
 #endif
+
