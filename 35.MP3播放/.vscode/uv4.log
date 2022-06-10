@@ -1,0 +1,15 @@
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'D:\keil\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling i2c.c...
+Basic\i2c.c(36): warning:  #940-D: missing return statement at end of non-void function "I2C1_ReceiveByte" 
+  }
+Basic\i2c.c(40): warning:  #1-D: last line of file ends without a newline
+  }
+Basic\i2c.c: 2 warnings, 0 errors
+linking...
+.\Objects\MP3.axf: Error: L6218E: Undefined symbol main (referred from __rtentry2.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+".\Objects\MP3.axf" - 1 Error(s), 2 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:02
