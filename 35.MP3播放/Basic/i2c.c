@@ -23,17 +23,36 @@ void I2C1_Configuration(void){
 }
 
 void I2C1_SendByte(u8 saddr,u8 waddr,u8 data){
-    
-    
+    I2C_GenerateSTART(I2C1,ENABLE);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT));//事件主模式选择
+    I2C_Send7bitAddress(I2C1,saddr,I2C_Direction_Transmitter);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));//事件主发送模式选择
+    I2C_SendData(I2C1,waddr);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+    I2C_SendData(I2C1,data);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+    I2C_GenerateSTOP(I2C1,ENABLE);
 }
 
 void I2C1_SendBuf(u8 saddr,u8 waddr,u8 bufptr,u16 buflen){
-
+    I2C_GenerateSTART(I2C1,ENABLE);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT));
+    I2C_Send7bitAddress(I2C1,saddr,I2C_Direction_Transmitter);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
+    I2C_SendData(I2C1,waddr);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+    while(buflen--){
+        I2C_SendData(I2C1,*(bufptr++));
+        while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+    }
+    I2C_GenerateSTOP(I2C1,ENABLE);
 }
 
 
 u8 I2C1_ReceiveByte(u8 saddr,u8 raddr){
-
+    I2C_GenerateSTART(I2C1,ENABLE);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT));
+    I2C_Send7bitAddress(I2C1,saddr,)
 }
 
 void I2C1_ReceiveBuf(u8 saddr,u8 raddr,u8* bufptr,u16 buflen){
