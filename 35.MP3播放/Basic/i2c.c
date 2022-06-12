@@ -34,7 +34,7 @@ void I2C1_SendByte(u8 saddr,u8 waddr,u8 data){
     I2C_GenerateSTOP(I2C1,ENABLE);
 }
 
-void I2C1_SendBuf(u8 saddr,u8 waddr,u8 bufptr,u16 buflen){
+void I2C1_SendBuf(u8 saddr,u8 waddr,u8* bufptr,u16 buflen){
     I2C_GenerateSTART(I2C1,ENABLE);
     while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT));
     I2C_Send7bitAddress(I2C1,saddr,I2C_Direction_Transmitter);
@@ -50,11 +50,45 @@ void I2C1_SendBuf(u8 saddr,u8 waddr,u8 bufptr,u16 buflen){
 
 
 u8 I2C1_ReceiveByte(u8 saddr,u8 raddr){
+    while(I2C_GetFlagStatus(I2C1,I2C_FLAG_BUSY));
     I2C_GenerateSTART(I2C1,ENABLE);
     while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT));
-    I2C_Send7bitAddress(I2C1,saddr,)
+    I2C_Send7bitAddress(I2C1,saddr,I2C_Direction_Transmitter);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
+    I2C_GenerateSTART(I2C1,ENABLE);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT));
+    I2C_SendData(I2C1,raddr);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+    I2C_GenerateSTART(I2C1,ENABLE);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT));
+    I2C_Send7bitAddress(I2C1,saddr,I2C_Direction_Receiver);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
+    I2C_AcknowledgeConfig(I2C1,DISABLE);
+    I2C_GenerateSTOP(I2C1,ENABLE);
+    return (I2C_ReceiveData(I2C1));
 }
 
 void I2C1_ReceiveBuf(u8 saddr,u8 raddr,u8* bufptr,u16 buflen){
-
+    while(I2C_GetFlagStatus(I2C1,I2C_FLAG_BUSY));
+    I2C_GenerateSTART(I2C1,ENABLE);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT));
+    I2C_Send7bitAddress(I2C1,saddr,I2C_Direction_Transmitter);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
+    I2C_GenerateSTART(I2C1,ENABLE);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT));
+    I2C_SendData(I2C1,raddr);
+    I2C_GenerateSTART(I2C1,ENABLE);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT));
+    I2C_Send7bitAddress(I2C1,saddr,I2C_Direction_Receiver);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
+    while(buflen--){
+        if(!buflen){
+            I2C_AcknowledgeConfig(I2C1,DISABLE);
+            I2C_GenerateSTOP(I2C1,ENABLE);
+        }
+        if(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)){
+            *(bufptr++)=I2C_ReceiveData(I2C1);
+        }
+    }
+    I2C_AcknowledgeConfig(I2C1,ENABLE);
 }

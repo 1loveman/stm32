@@ -3,15 +3,13 @@
         {
             "name": "Target 1",
             "includePath": [
-                "e:\\个人\\stm32\\35.MP3播放\\Basic",
-                "e:\\个人\\stm32\\35.MP3播放\\CMSIS",
-                "e:\\个人\\stm32\\35.MP3播放\\Hardware",
-                "e:\\个人\\stm32\\35.MP3播放\\Lib\\inc",
-                "e:\\个人\\stm32\\35.MP3播放\\Lib\\src",
-                "e:\\个人\\stm32\\35.MP3播放\\Startup",
-                "e:\\个人\\stm32\\35.MP3播放\\User",
-                "D:\\Keil\\ARM\\ARMCC\\include",
-                "D:\\Keil\\ARM\\ARMCC\\include\\rw"
+                "e:\\stm32\\35.MP3播放\\Basic",
+                "e:\\stm32\\35.MP3播放\\CMSIS",
+                "e:\\stm32\\35.MP3播放\\Hardware",
+                "e:\\stm32\\35.MP3播放\\Lib\\inc",
+                "e:\\stm32\\35.MP3播放\\Lib\\src",
+                "e:\\stm32\\35.MP3播放\\Startup",
+                "e:\\stm32\\35.MP3播放\\User"
             ],
             "defines": [
                 "USE_STDPERIPH_DRIVER",

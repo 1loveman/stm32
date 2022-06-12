@@ -9,7 +9,7 @@
 
 void I2C1_Configuration(void);
 void I2C1_SendByte(u8 saddr,u8 waddr,u8 data);
-void I2C1_SendBuf(u8 saddr,u8 waddr,u8 bufptr,u16 buflen);
+void I2C1_SendBuf(u8 saddr,u8 waddr,u8* bufptr,u16 buflen);
 u8 I2C1_ReceiveByte(u8 saddr,u8 raddr);
 void I2C1_ReceiveBuf(u8 saddr,u8 raddr,u8* bufptr,u16 buflen);
 

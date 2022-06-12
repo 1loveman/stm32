@@ -2,7 +2,7 @@
 .\objects\i2c.o: Basic\i2c.h
 .\objects\i2c.o: .\CMSIS\stm32f10x.h
 .\objects\i2c.o: .\CMSIS\core_cm3.h
-.\objects\i2c.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\i2c.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\i2c.o: .\CMSIS\system_stm32f10x.h
 .\objects\i2c.o: .\User\stm32f10x_conf.h
 .\objects\i2c.o: .\Lib\inc\stm32f10x_adc.h
