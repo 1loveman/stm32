@@ -9,7 +9,9 @@
                 "e:\\stm32\\35.MP3播放\\Lib\\inc",
                 "e:\\stm32\\35.MP3播放\\Lib\\src",
                 "e:\\stm32\\35.MP3播放\\Startup",
-                "e:\\stm32\\35.MP3播放\\User"
+                "e:\\stm32\\35.MP3播放\\User",
+                "D:\\Keil_v5\\ARM\\ARMCC\\include",
+                "D:\\Keil_v5\\ARM\\ARMCC\\include\\rw"
             ],
             "defines": [
                 "USE_STDPERIPH_DRIVER",

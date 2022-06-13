@@ -1,9 +1,10 @@
 *** Using Compiler 'V5.06 update 4 (build 422)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Target 1'
+compiling OLED.c...
 linking...
 .\Objects\MP3.axf: Error: L6218E: Undefined symbol main (referred from __rtentry2.o).
 Not enough information to list image symbols.
 Finished: 1 information, 0 warning and 1 error messages.
 ".\Objects\MP3.axf" - 1 Error(s), 0 Warning(s).
 Target not created.
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
