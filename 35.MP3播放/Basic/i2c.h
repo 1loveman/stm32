@@ -5,7 +5,7 @@
 #define I2C1_SDA GPIO_Pin_7
 #define I2C1_SCL GPIO_Pin_6
 #define HOSTADDR 0XC0
-#define BUSSPEED 20000
+#define BUSSPEED 200000
 
 void I2C1_Configuration(void);
 void I2C1_SendByte(u8 saddr,u8 waddr,u8 data);

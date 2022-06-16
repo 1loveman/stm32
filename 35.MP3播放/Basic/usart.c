@@ -11,7 +11,7 @@ void _sys_exit(int x){
     x=x;
 }
 
-int fputc(int ch,FILE* fp){
+int fputc(int ch,FILE* f){
     while(!(USARTN->SR&0X40));
     USARTN->DR=(u8)ch;
     return ch;

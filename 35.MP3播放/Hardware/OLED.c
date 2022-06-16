@@ -28,13 +28,12 @@ void OLED_ON(void){
 }
 
 void OLED_CLEAR(void){
-    u8 i=0;
-    u8 j=0;
-    while(i<8){
-        I2C1_SendByte(OLEDADDR,COMADDR,0XB0+(i++));
+    u8 i,j;
+    for(i=0;i<0XB8;i++){
+        I2C1_SendByte(OLEDADDR,COMADDR,i);
         I2C1_SendByte(OLEDADDR,COMADDR,0X10);
         I2C1_SendByte(OLEDADDR,COMADDR,0X00);
-        while(j<132){
+        for(j=0;j<132;j++){
             I2C1_SendByte(OLEDADDR,DATAADDR,0X00);
         }
     }
@@ -59,8 +58,8 @@ void OLED_Show8x16(u8 col,u8 rol,u16 data){
     u8 j,x=0;
     while((i++)<2){
         I2C1_SendByte(OLEDADDR,COMADDR,0XB0+(col++));
-        I2C1_SendByte(OLEDADDR,COMADDR,0X00+rol%16);
-        I2C1_SendByte(OLEDADDR,COMADDR,0x10+(rol+2)/16);
+        I2C1_SendByte(OLEDADDR,COMADDR,0X02+rol%16);
+        I2C1_SendByte(OLEDADDR,COMADDR,0x10+rol/16);
         for(j=0;j<8;j++){
             I2C1_SendByte(OLEDADDR,DATAADDR,ASC_TAB[data*16+(x++)-512]);
         }
@@ -79,8 +78,8 @@ void OLED_Show16x16(u8 col,u8 rol,u16 data){
     u8 j,x=0;
     while((i++)<2){
         I2C1_SendByte(OLEDADDR,COMADDR,0XB0+(col++));
-        I2C1_SendByte(OLEDADDR,COMADDR,0X00+((rol+2)%16));
-        I2C1_SendByte(OLEDADDR,COMADDR,0X10+(rol/16));
+        I2C1_SendByte(OLEDADDR,COMADDR,0X02+rol%16);
+        I2C1_SendByte(OLEDADDR,COMADDR,0X10+rol/16);
         for(j=0;j<16;j++){
             I2C1_SendByte(OLEDADDR,DATAADDR,WORD_TAB[data*32+(x++)]);
         }

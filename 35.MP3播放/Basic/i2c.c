@@ -77,6 +77,7 @@ void I2C1_ReceiveBuf(u8 saddr,u8 raddr,u8* bufptr,u16 buflen){
     I2C_GenerateSTART(I2C1,ENABLE);
     while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT));
     I2C_SendData(I2C1,raddr);
+    while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED));
     I2C_GenerateSTART(I2C1,ENABLE);
     while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT));
     I2C_Send7bitAddress(I2C1,saddr,I2C_Direction_Receiver);

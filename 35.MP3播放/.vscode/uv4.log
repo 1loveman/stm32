@@ -2,9 +2,7 @@
 Build target 'Target 1'
 compiling MY1690.c...
 linking...
-.\Objects\MP3.axf: Error: L6218E: Undefined symbol main (referred from __rtentry2.o).
-Not enough information to list image symbols.
-Finished: 1 information, 0 warning and 1 error messages.
-".\Objects\MP3.axf" - 1 Error(s), 0 Warning(s).
-Target not created.
-Build Time Elapsed:  00:00:05
+Program Size: Code=11244 RO-data=2360 RW-data=24 ZI-data=1632  
+FromELF: creating hex file...
+".\Objects\MP3.axf" - 0 Error(s), 0 Warning(s).
+Build Time Elapsed:  00:00:01

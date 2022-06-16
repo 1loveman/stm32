@@ -6,6 +6,7 @@ void NVIC_Configuration(void){
 
 void RCC_Configuration(void){
     ErrorStatus HSEStart;
+    RCC_DeInit();
     RCC_HSEConfig(RCC_HSE_ON);
     HSEStart=RCC_WaitForHSEStartUp();
     if(HSEStart){
