@@ -206,7 +206,7 @@ I (.\Lib\inc\stm32f10x_usart.h)(0x62A5DFA5)
 I (.\Lib\inc\stm32f10x_wwdg.h)(0x62A5DFA5)
 I (.\Lib\inc\misc.h)(0x62A5DFA5)
 F (.\Startup\startup_stm32f10x_md.s)(0x62A5DFA5)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 523" --pd "STM32F10X_MD SETA 1"--list .\listings\startup_stm32f10x_md.lst --xref -o .\objects\startup_stm32f10x_md.o --depend .\objects\startup_stm32f10x_md.d)
-F (.\User\main.c)(0x62AB39CA)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Basic -I .\CMSIS -I .\Hardware -I .\Lib\inc -I .\Lib\src -I .\Startup -I .\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\User\main.c)(0x62AC543F)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Basic -I .\CMSIS -I .\Hardware -I .\Lib\inc -I .\Lib\src -I .\Startup -I .\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (.\CMSIS\stm32f10x.h)(0x62A5DFA5)
 I (.\CMSIS\core_cm3.h)(0x62A5DFA5)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -238,14 +238,14 @@ I (.\Lib\inc\misc.h)(0x62A5DFA5)
 I (.\Basic\sys.h)(0x62A5DFA5)
 I (.\Basic\delay.h)(0x62A5DFA5)
 I (.\Basic\i2c.h)(0x62AAF466)
-I (.\Basic\usart.h)(0x62AB393B)
+I (.\Basic\usart.h)(0x62AC439C)
 I (D:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (.\Hardware\TOUCH.h)(0x62A68B13)
 I (.\Hardware\ROTARY.h)(0x62A99299)
-I (.\Hardware\MY1690.h)(0x62AAE78E)
+I (.\Hardware\MY1690.h)(0x62AC2BFC)
 I (.\Hardware\OLED.h)(0x62A6F575)
 F (.\User\stm32f10x_it.c)(0x62A5DFA5)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Basic -I .\CMSIS -I .\Hardware -I .\Lib\inc -I .\Lib\src -I .\Startup -I .\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\stm32f10x_it.o --omf_browse .\objects\stm32f10x_it.crf --depend .\objects\stm32f10x_it.d)
 I (User\stm32f10x_it.h)(0x62A5DFA5)
@@ -367,8 +367,8 @@ I (.\Lib\inc\stm32f10x_tim.h)(0x62A5DFA5)
 I (.\Lib\inc\stm32f10x_usart.h)(0x62A5DFA5)
 I (.\Lib\inc\stm32f10x_wwdg.h)(0x62A5DFA5)
 I (.\Lib\inc\misc.h)(0x62A5DFA5)
-F (.\Basic\usart.c)(0x62AAF43C)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Basic -I .\CMSIS -I .\Hardware -I .\Lib\inc -I .\Lib\src -I .\Startup -I .\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\usart.o --omf_browse .\objects\usart.crf --depend .\objects\usart.d)
-I (Basic\usart.h)(0x62AB393B)
+F (.\Basic\usart.c)(0x62AC4A60)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Basic -I .\CMSIS -I .\Hardware -I .\Lib\inc -I .\Lib\src -I .\Startup -I .\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\usart.o --omf_browse .\objects\usart.crf --depend .\objects\usart.d)
+I (Basic\usart.h)(0x62AC439C)
 I (.\CMSIS\stm32f10x.h)(0x62A5DFA5)
 I (.\CMSIS\core_cm3.h)(0x62A5DFA5)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -401,8 +401,8 @@ I (D:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-F (.\Hardware\MY1690.c)(0x62AB3A4D)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Basic -I .\CMSIS -I .\Hardware -I .\Lib\inc -I .\Lib\src -I .\Startup -I .\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\my1690.o --omf_browse .\objects\my1690.crf --depend .\objects\my1690.d)
-I (Hardware\MY1690.h)(0x62AAE78E)
+F (.\Hardware\MY1690.c)(0x62AC30A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Basic -I .\CMSIS -I .\Hardware -I .\Lib\inc -I .\Lib\src -I .\Startup -I .\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\my1690.o --omf_browse .\objects\my1690.crf --depend .\objects\my1690.d)
+I (Hardware\MY1690.h)(0x62AC2BFC)
 I (.\CMSIS\stm32f10x.h)(0x62A5DFA5)
 I (.\CMSIS\core_cm3.h)(0x62A5DFA5)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -431,7 +431,7 @@ I (.\Lib\inc\stm32f10x_tim.h)(0x62A5DFA5)
 I (.\Lib\inc\stm32f10x_usart.h)(0x62A5DFA5)
 I (.\Lib\inc\stm32f10x_wwdg.h)(0x62A5DFA5)
 I (.\Lib\inc\misc.h)(0x62A5DFA5)
-I (.\Basic\usart.h)(0x62AB393B)
+I (.\Basic\usart.h)(0x62AC439C)
 I (D:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
@@ -470,7 +470,7 @@ I (.\Basic\i2c.h)(0x62AAF466)
 I (Hardware\ascall.h)(0x62A6FCDF)
 I (Hardware\word.h)(0x62A74790)
 I (Hardware\photo.h)(0x62A7559D)
-F (.\Hardware\ROTARY.c)(0x62A9A7F5)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Basic -I .\CMSIS -I .\Hardware -I .\Lib\inc -I .\Lib\src -I .\Startup -I .\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\rotary.o --omf_browse .\objects\rotary.crf --depend .\objects\rotary.d)
+F (.\Hardware\ROTARY.c)(0x62AC4D3E)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Basic -I .\CMSIS -I .\Hardware -I .\Lib\inc -I .\Lib\src -I .\Startup -I .\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\rotary.o --omf_browse .\objects\rotary.crf --depend .\objects\rotary.d)
 I (Hardware\ROTARY.h)(0x62A99299)
 I (.\CMSIS\stm32f10x.h)(0x62A5DFA5)
 I (.\CMSIS\core_cm3.h)(0x62A5DFA5)

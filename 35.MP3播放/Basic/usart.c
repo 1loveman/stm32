@@ -21,6 +21,8 @@ int fputc(int ch,FILE* f){
 
 #if EN_USART3
 
+u8 USART3_RX_STA;
+
 void USART3_printf(char* fmt,...){
     char buf[USART3_REC_LEN+1];
     u8 i=0;
@@ -67,8 +69,17 @@ void USART3_Init(u32 bound){
     USART_Cmd(USART3,ENABLE);
 }
 
+void USART3_IRQHandler(void){
+    u8 Res;
+    if(!USART_GetITStatus(USART3, USART_IT_RXNE)){
+        Res =USART_ReceiveData(USART3);
+        if(Res=='S'){          
+            USART3_RX_STA=1;     
+        }else if(Res=='K'){           
+            USART3_RX_STA=2; 
+        }            
+    }
+}
+
 #endif
 
-void USART3_IRQHandler(void){
-
-}

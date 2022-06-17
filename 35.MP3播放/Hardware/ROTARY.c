@@ -16,7 +16,7 @@ void ROTARY_Init(void){
 }
 
 u8 ROTARY_GetStaus(void){
-    u8 F,a;
+    u8 F,a=0;
     if(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_6))key=0;
     if(!GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_6)&&(!key)){
         delay_us(100);
