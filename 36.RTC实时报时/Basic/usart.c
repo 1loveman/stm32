@@ -19,6 +19,58 @@ int fputc(int ch,FILE* f){
 
 #endif
 
+#if EN_USART1
+u16 USART1_RX_STA=0;
+u8 USART1_RX_BUF[USART1_REC_LEN];
+
+void USART1_printf(char* fmt,...){
+    char buf[USART1_REC_LEN+1];
+    u8 i=0;
+    va_list arg_ptr;
+    va_start(arg_ptr,fmt);
+    vsnprintf(buf,USART1_REC_LEN+1,fmt,arg_ptr);
+    while((i<USART1_REC_LEN)&&(i<strlen(buf))){
+        USART_SendData(USART1,(u8)buf[i++]);
+        while(!(USART1->SR&0X40));
+    }
+    va_end(arg_ptr);
+}
+
+void USART1_Init(u32 bound){
+    GPIO_InitTypeDef GPIO_InitS;
+    NVIC_InitTypeDef NVIC_InitS;
+    USART_InitTypeDef USART_InitS;
+
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA|RCC_APB2Periph_USART1,ENABLE);
+    
+    GPIO_InitS.GPIO_Pin=GPIO_Pin_9;
+    GPIO_InitS.GPIO_Mode=GPIO_Mode_Out_PP;
+    GPIO_InitS.GPIO_Speed=GPIO_Speed_50MHz;
+    GPIO_Init(GPIOA,&GPIO_InitS);
+    GPIO_InitS.GPIO_Pin=GPIO_Pin_10;
+    GPIO_InitS.GPIO_Mode=GPIO_Mode_IN_FLOATING;
+    GPIO_Init(GPIOA,&GPIO_InitS);
+
+    NVIC_InitS.NVIC_IRQChannel=USART1_IRQn;
+    NVIC_InitS.NVIC_IRQChannelPreemptionPriority=3;
+    NVIC_InitS.NVIC_IRQChannelSubPriority=3;
+    NVIC_InitS.NVIC_IRQChannelCmd=ENABLE;
+    NVIC_Init(&NVIC_InitS);
+
+    USART_InitS.USART_BaudRate=bound;
+    USART_InitS.USART_WordLength=USART_WordLength_8b;
+    USART_InitS.USART_StopBits=USART_StopBits_1;
+    USART_InitS.USART_Parity=USART_Parity_No;
+    USART_InitS.USART_HardwareFlowControl=USART_HardwareFlowControl_None;
+    USART_InitS.USART_Mode=USART_Mode_Rx|USART_Mode_Tx;
+    USART_Init(USART1,&USART_InitS);
+    USART_ITConfig(USART1,USART_IT_RXNE,ENABLE);
+    USART_Cmd(USART1,ENABLE);
+}
+
+#endif
+
+
 #if EN_USART3
 
 u8 USART3_RX_STA;
