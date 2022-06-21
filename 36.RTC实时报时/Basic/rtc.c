@@ -32,7 +32,7 @@ void RTC_Configuration(void){
     }
     else{
         RTC_Init();
-        BKP_WriteBackupRegister(BKP_DR10,0XA5A5);
+        BKP_WriteBackupRegister(BKP_DR1,0XA5A5);
     }
     
     #ifndef RTCClockOutput_Enable
@@ -97,7 +97,7 @@ u8 RTC_GetTime(void){
                 if(tcount>=366)tcount-=1;
                 else break;
             }
-            Count-=365;
+            tcount-=365;
         }
         rYear=temp;
         for(temp=1;tcount>=28;temp++){

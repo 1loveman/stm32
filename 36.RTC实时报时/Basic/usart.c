@@ -44,7 +44,7 @@ void USART1_Init(u32 bound){
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA|RCC_APB2Periph_USART1,ENABLE);
     
     GPIO_InitS.GPIO_Pin=GPIO_Pin_9;
-    GPIO_InitS.GPIO_Mode=GPIO_Mode_Out_PP;
+    GPIO_InitS.GPIO_Mode=GPIO_Mode_AF_PP;
     GPIO_InitS.GPIO_Speed=GPIO_Speed_50MHz;
     GPIO_Init(GPIOA,&GPIO_InitS);
     GPIO_InitS.GPIO_Pin=GPIO_Pin_10;
@@ -68,6 +68,31 @@ void USART1_Init(u32 bound){
     USART_Cmd(USART1,ENABLE);
 }
 
+void USART1_IRQHandler(void){
+    u8 res;
+    if(USART_GetITStatus(USART1,USART_IT_RXNE)){
+        res=USART_ReceiveData(USART1);
+        USART1_printf("%c",res);
+        if(!(USART1_RX_STA&0X8000)){
+            if(USART1_RX_STA&0X4000){
+                if(res==0x0A)USART1_RX_STA|=0X8000;
+                else USART1_RX_STA=0;
+            }
+            else{
+                if(res==0x0D)USART1_RX_STA|=0X4000;
+                else{
+                    USART1_RX_BUF[(USART1_RX_STA++)&0X3FFF]=res;
+                    if((USART1_RX_STA&0X3FFF)>(USART1_REC_LEN-1)){
+                        USART1_RX_STA=0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 #endif
 
 
@@ -83,7 +108,7 @@ void USART3_printf(char* fmt,...){
     vsnprintf(buf,USART3_REC_LEN+1,fmt,arg_ptr);
     while((i<USART3_REC_LEN)&&(i<strlen(buf))){
         USART_SendData(USART3,(u8)buf[i++]);
-        while(!(USARTN->SR&0X40));
+        while(!(USART3->SR&0X40));
     }
     va_end(arg_ptr);
 }
@@ -104,9 +129,9 @@ void USART3_Init(u32 bound){
     GPIO_InitS.GPIO_Speed=GPIO_Speed_50MHz;
     GPIO_Init(GPIOB,&GPIO_InitS);
 
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_0);
     NVIC_InitS.NVIC_IRQChannel=USART3_IRQn;
-    NVIC_InitS.NVIC_IRQChannelPreemptionPriority=3;
-    NVIC_InitS.NVIC_IRQChannelSubPriority=3;
+    NVIC_InitS.NVIC_IRQChannelSubPriority=0;
     NVIC_InitS.NVIC_IRQChannelCmd=ENABLE;
     NVIC_Init(&NVIC_InitS);
 

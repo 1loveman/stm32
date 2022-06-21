@@ -509,6 +509,11 @@
               <FileType>1</FileType>
               <FilePath>.\Hardware\OLED.c</FilePath>
             </File>
+            <File>
+              <FileName>TOUCH.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\TOUCH.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

@@ -39,3 +39,4 @@
 .\objects\main.o: .\Basic\rtc.h
 .\objects\main.o: .\Hardware\MY1690.h
 .\objects\main.o: .\Hardware\OLED.h
+.\objects\main.o: .\Hardware\TOUCH.h

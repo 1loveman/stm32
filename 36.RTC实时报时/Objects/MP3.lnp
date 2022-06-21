@@ -20,6 +20,7 @@
 ".\objects\rtc.o"
 ".\objects\my1690.o"
 ".\objects\oled.o"
+".\objects\touch.o"
 --strict --scatter ".\Objects\MP3.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
