@@ -44,25 +44,52 @@ int main(void){
         if(!GPIO_ReadInputDataBit(TKPORT,TK1)){
             delay_ms(20);
             if(!GPIO_ReadInputDataBit(TKPORT,TK1)){
-                MY1690_Cmd3(0X41,0X0015);
+                MY1690_Cmd3(0X41,12);
                 if(!(rHour/10)){
                     
                 }
                 else if(rHour/10==1){
-                    MY1690_Cmd3(0X41,0X0011);
+                    MY1690_Cmd3(0X41,11);
                 }
                 else{
                     MY1690_Cmd3(0x41,rHour/10+1);
-                    MY1690_Cmd3(0X41,0X0011);
+                    MY1690_Cmd3(0X41,11);
                 }
                 if(!(rHour%10)&&(rHour/10)){
-
+                    MY1690_Cmd3(0X41,13);
                 }
                 else{
                     MY1690_Cmd3(0X41,rHour%10+1);
+                    MY1690_Cmd3(0X41,13);
                 }
-                MY1690_Cmd3(0X41,0X0014);
-
+                if(rMin/10==0){
+                    MY1690_Cmd3(0X41,rMin/10+1);
+                }
+                else if(rMin/10==1){
+                    MY1690_Cmd3(0X41,11);
+                }
+                else{
+                    MY1690_Cmd3(0X41,rMin/10+1);
+                    MY1690_Cmd3(0X41,11);
+                }
+                if(rMin%10||!rMin){
+                    MY1690_Cmd3(0X41,rMin%10+1);
+                }
+                MY1690_Cmd3(0X41,14);
+                if(rSec/10==0){
+                    MY1690_Cmd3(0x41,rSec/10+1);
+                }
+                else if(rSec/10==1){
+                    MY1690_Cmd3(0X41,11);
+                }
+                else{
+                    MY1690_Cmd3(0x41,rSec/10+1);
+                    MY1690_Cmd3(0x41,11);
+                }
+                if((rSec%10)||(!rSec)){
+                    MY1690_Cmd3(0X41,rSec%10+1);
+                }
+                MY1690_Cmd3(0X41,15);
             }
         }
         
