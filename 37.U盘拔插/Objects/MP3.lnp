@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+".\objects\core_cm3.o"
+".\objects\system_stm32f10x.o"
+".\objects\misc.o"
+".\objects\stm32f10x_flash.o"
+".\objects\stm32f10x_gpio.o"
+".\objects\stm32f10x_rcc.o"
+".\objects\stm32f10x_i2c.o"
+".\objects\stm32f10x_spi.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\main.o"
+".\objects\stm32f10x_it.o"
+".\objects\delay.o"
+".\objects\i2c.o"
+".\objects\sys.o"
+".\objects\spi.o"
+".\objects\oled.o"
+".\objects\ch376.o"
+--strict --scatter ".\Objects\MP3.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\MP3.map" -o .\Objects\MP3.axf
